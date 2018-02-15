@@ -24,6 +24,6 @@ pages ={'1': '1', \
         '2': '10', \
         '11': 'IV',\
         'V': 'evif',\
-        'xis': 'Nice!',
+        'xis': 'Nice!'}
 ```
 You can add as many pages as you would like, as long as the page names / URLs are unique.
