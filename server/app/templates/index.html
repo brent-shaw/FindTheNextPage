@@ -1,7 +1,16 @@
-{% extends "base.html" %}
-{% block content %}  
+<html>
+  <head>
+    <title>{{clue}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="full">
+      <div class="center_text">
         <!--Good luck!-->
         <p>Welcome to the puzzle!</p>
         <p>Each page contains a clue on how to get to the next page.</p>
         <a href="/1">Start on Page 1</a>
-{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
