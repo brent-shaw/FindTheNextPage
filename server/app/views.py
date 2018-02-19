@@ -19,7 +19,7 @@ pages['5'] = '5'
 
 @app.route('/')
 def start():
-    return render_template("index.html", clue="Welcome!")
+    return render_template("index.html")
 
 #------------------------------------------------------------------------------
 #Function for returning each clue page / puzzle page
