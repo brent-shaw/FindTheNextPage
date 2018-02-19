@@ -4,16 +4,15 @@ from app import app
 #------------------------------------------------------------------------------
 #Dictionary for storing pages and clues
 #
-#Pages are in the forms of: '<address>': '<clue>'
-#An example: {'1': 'Change the URL to page "2" ', \
-#	      '2': 'Try speeling the next one out', \
-#	      'three': 'That's it!'}
+#Now using OrderedDict
+#TODO Question list to OrderedDict processor
 
-pages ={'1': '1', \
-        '2': '2', \
-        '3': '3',\
-        '4': '4',\
-        '5': '5',}
+pages = collections.OrderedDict()
+pages['1'] = '1'
+pages['2'] = '2'
+pages['3'] = '3'
+pages['4'] = '4'
+pages['5'] = '5'
 
 #------------------------------------------------------------------------------
 #Function for displaying the start page
@@ -29,8 +28,7 @@ def start():
 @app.route('/<T>')
 def puzzle(T):
     try:
-        return render_template("puzzle.html", clue=pages[T])
+        n = pages.keys().index(T)+1;
+        return render_template("puzzle.html", number=n, clue=pages[T])
     except:
-        return render_template("puzzle.html", clue='Nope, Try again!')
-
-#------------------------------------------------------------------------------
+        return render_template("puzzle.html", clue='Nope, Try again!'), 400
