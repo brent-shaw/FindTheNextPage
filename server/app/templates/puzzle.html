@@ -1,6 +1,15 @@
-{% extends "base.html" %}
-{% block content %}
+<html>
+  <head>
+    <title>{{number}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  </head>
+  <body>
+    <div class="full">
+      <div class="center_text">
         <!--You only get one clue-->
         <p>{{clue}}</p>
         <!--You won't find answers here-->
-{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
