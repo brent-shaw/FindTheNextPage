@@ -3,11 +3,8 @@ from app import app
 
 #------------------------------------------------------------------------------
 #Dictionary for storing pages and clues
-#
-#Now using OrderedDict
-#TODO Question list to OrderedDict processor
 
-pages = collections.OrderedDict()
+pages = {}
 pages['1'] = '1'
 pages['2'] = '2'
 pages['3'] = '3'
@@ -28,7 +25,7 @@ def start():
 @app.route('/<T>')
 def puzzle(T):
     try:
-        n = pages.keys().index(T)+1;
+        n = pages[T]
         return render_template("puzzle.html", number=n, clue=pages[T])
     except:
         return render_template("puzzle.html", clue='Nope, Try again!'), 400
