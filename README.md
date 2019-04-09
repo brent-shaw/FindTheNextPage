@@ -9,7 +9,7 @@ Simple game where clues lead you from page to page.
 
 NOTE: This has been written and tested for Python 3.6, but should work with newer versions.
 
-This project requires [Flask]: https://pypi.org/project/Flask/
+This project requires [Flask](https://pypi.org/project/Flask/)
 
 # Running the game
 
